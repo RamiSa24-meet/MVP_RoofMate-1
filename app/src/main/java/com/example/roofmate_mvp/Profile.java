@@ -3,6 +3,7 @@ package com.example.roofmate_mvp;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -28,10 +29,12 @@ public class Profile extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
 
+
+        int id = item.getItemId();
         if (id == R.id.tool1) {
-            // Handle action for Tool 1
+            Intent intent = new Intent(Profile.this, HomePage.class);
+            startActivity(intent);
             return true;
         } else if (id == R.id.tool2) {
             // Handle action for Tool 2
